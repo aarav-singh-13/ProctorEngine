@@ -1,0 +1,24 @@
+{
+  "name": "proctorengine",
+  "version": "1.0.0",
+  "description": "An anti-cheating test taking platform which provides video proctoring",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aarav-singh-13/ProctorEngine.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aarav-singh-13/ProctorEngine/issues"
+  },
+  "homepage": "https://github.com/aarav-singh-13/ProctorEngine#readme",
+  "dependencies": {
+    "expres": "^0.0.5",
+    "express": "^5.2.1"
+  }
+}
