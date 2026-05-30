@@ -26,7 +26,7 @@ async function reset() {
     console.log('Schema recreated');
 
     // Seed data
-    const { seedDatabase } = await import('./seed-dummy-data.js');
+    const { seedDatabase } = await import('./dummy_data.js');
     await seedDatabase();
 
     console.log('Database reset complete!');

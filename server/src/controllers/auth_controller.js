@@ -1,7 +1,7 @@
 import {
   loginWithPassword,
   getSessionFromAccessToken,
-} from '../services/auth.service.js';
+} from '../services/auth_service.js';
 
 export async function postLogin(req, res, next) {
   try {

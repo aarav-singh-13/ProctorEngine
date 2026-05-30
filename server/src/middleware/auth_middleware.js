@@ -1,4 +1,4 @@
-import { getSessionFromAccessToken } from '../services/auth.service.js';
+import { getSessionFromAccessToken } from '../services/auth_service.js';
 
 export async function requireAuth(req, res, next) {
   try {

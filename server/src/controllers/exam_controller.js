@@ -3,8 +3,8 @@ import {
   getExamQuestions,
   recordQuestionResponse,
   submitExam,
-} from '../services/exam.service.js';
-import { logIntegrityEvent } from '../services/session.service.js';
+} from '../services/exam_service.js';
+import { logIntegrityEvent } from '../services/session_service.js';
 
 export async function getQuestions(req, res, next) {
   try {

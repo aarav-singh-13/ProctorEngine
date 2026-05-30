@@ -1,6 +1,6 @@
 import express from 'express';
-import { requireAuth } from '../middleware/auth.middleware.js';
-import { finalizeExam, getQuestions, recordStrike, submitAnswer } from '../controllers/exam.controller.js';
+import { requireAuth } from '../middleware/auth_middleware.js';
+import { finalizeExam, getQuestions, recordStrike, submitAnswer } from '../controllers/exam_controller.js';
 
 const router = express.Router();
 

@@ -1,19 +1,20 @@
-import { getSessionFromAccessToken } from '../services/auth.service.js';
+export function notFoundHandler(req, res) {
+  res.status(404).json({ error: 'Route not found' });
+}
 
-export async function requireAuth(req, res, next) {
-  try {
-    const header = req.headers.authorization || '';
-    const token = header.startsWith('Bearer ') ? header.slice(7) : null;
+export function errorHandler(err, req, res, next) {
+  const statusCode = err.statusCode || 500;
+  const payload = {
+    error: err.message || 'Internal server error',
+  };
 
-    if (!token) {
-      return res.status(401).json({ error: 'Authorization token required' });
-    }
-
-    // allowAllStatuses = false → only active sessions can access exam endpoints
-    const { decoded, session } = await getSessionFromAccessToken(token, false);
-    req.auth = { token, decoded, session };
-    next();
-  } catch (err) {
-    next(err);
+  if (err.details) {
+    payload.details = err.details;
   }
+
+  if (statusCode >= 500) {
+    console.error(err);
+  }
+
+  res.status(statusCode).json(payload);
 }

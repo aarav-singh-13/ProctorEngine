@@ -9,7 +9,7 @@ import {
   findSubmittedSessionForStudent,
   findSessionByToken,
   logIntegrityEvent,
-} from './session.service.js';
+} from './session_service.js';
 
 export function signSessionToken(payload) {
   return jwt.sign(payload, env.jwtSecret, { expiresIn: env.jwtExpiresIn });
